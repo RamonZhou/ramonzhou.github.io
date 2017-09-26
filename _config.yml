@@ -1,3 +1,6 @@
+source:      .
+destination: ./_site
+
 # Site settings 配置站点
 title: 'Deluxurous Blog'
 description: 'Keep Calm And Code'
