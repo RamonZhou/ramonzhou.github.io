@@ -2,7 +2,7 @@
 title: 'Deluxurous Blog'
 description: 'Keep Calm And Code'
 keyword: '蒟蒻IOer'
-url: 'https://anthonyledger.github.io/BlogPages' # your host
+url: 'https://anthonyledger.github.io/BlogPages/' # your host
 baseurl: '/'
 
 # Navigation links
@@ -14,7 +14,7 @@ nav:
 author: 'Deluxurous'
 nickname: ''
 bio: 'Keep Calm And Code'
-avatar: '/assets/img/profile.png'
+avatar: 'assets/img/profile.png'
 
 # Search
 search: true
