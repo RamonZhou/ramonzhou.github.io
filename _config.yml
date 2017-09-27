@@ -1,9 +1,12 @@
 # Site settings 配置站点
-title: 'Deluxurous Blog'
+title: 'Ninth Deluxuriment'
 description: 'Keep Calm And Code'
 keyword: '蒟蒻IOer'
 url: 'https://anthonyledger.github.io/BlogPages' # your host
-baseurl: '/'
+baseurl: ''
+
+# Hero background patterns
+# postPatterns: 'ticTacToe'
 
 # Navigation links
 nav:
@@ -14,7 +17,7 @@ nav:
 author: 'Deluxurous'
 nickname: ''
 bio: 'Keep Calm And Code'
-avatar: 'assets/img/profile.png'
+avatar: '/assets/img/profile.png'
 
 # Search
 search: true
@@ -23,12 +26,12 @@ search: true
 nightMode: true
 
 # Comments
-disqus: false
-# disqus_url: 'https://liaokeyu.disqus.com/embed.js'
+disqus: true
+disqus_url: 'https://deluxurous.disqus.com/embed.js'
 
 # Share
 social-share: true
-social-share-items: ['wechat', 'weibo', 'douban', 'twitter']
+social-share-items: ['wechat', 'qq', 'qzone', 'weibo', 'tencent', 'douban', 'twitter', 'facebook', 'google']
 
 # theme color 主题皮肤
 theme-color: 'default'  # pink or default
