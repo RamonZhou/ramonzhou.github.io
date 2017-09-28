@@ -5,6 +5,7 @@ date: 2017-09-27
 author: Deluxurous
 cover: '/assets/img/helloworld.jpg'
 tags: Blog
+latestupdate: 2017-09-27-19-28
 ---
 
 打算建博客，但是又想有点自己个性化的空间，于是在Github Pages上用[Jekyll](https://jekyllrb.com/)搭了这个blog。
@@ -18,3 +19,12 @@ tags: Blog
 先说这么多吧233。
 
 欢迎交换友链哦~
+
+17-09-28 Update: 可以支持显示公式啦~ Like this: $\displaystyle f(a)=\frac{1}{2\pi i}\oint_{\gamma}\frac{f(z)}{z-a}dz$ 不过公式完全显示好像要稍等一下下... //based on [MathJax](https://www.mathjax.org/)
+
+同时可以支持代码高亮啦！//based on [Prism.js](http://prismjs.com/)
+<pre class="line-numbers"><code class="language-cpp">
+	int main() {
+		puts("hello world!");
+	};
+</code></pre>
