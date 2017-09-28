@@ -2,11 +2,11 @@
 title: 'Ninth Deluxuriment'
 description: 'Keep Calm And Code'
 keyword: '蒟蒻IOer'
-url: 'https://anthonyledger.github.io' # your host
-baseurl: '/BlogPages/'
+url: 'https://anthonyledger.github.io/BlogPages/' # your host
+baseurl: ''
 
 # Hero background patterns
-# postPatterns: 'ticTacToe'
+postPatterns: 'ticTacToe'
 
 # Navigation links
 nav:
