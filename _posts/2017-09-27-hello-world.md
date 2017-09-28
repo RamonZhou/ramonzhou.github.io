@@ -4,7 +4,7 @@ title: 'Hello World'
 date: 2017-09-27
 author: Deluxurous
 cover: '/assets/img/helloworld.jpg'
-tags: Others Blog
+tags: Blog
 ---
 
 打算建博客，但是又想有点自己个性化的空间，于是在Github Pages上用[Jekyll](https://jekyllrb.com/)搭了这个blog。

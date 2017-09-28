@@ -70,5 +70,6 @@ plugins: [jekyll-paginate]
 links:
   'Dance_of_Faith' : 'http://blog.csdn.net/zj_yuneng/'
   'Samsara_Karma' : 'http://blog.163.com/James_Chen0306/'
+  'tttnns-blog' : 'https://tttnns-blog.readthedocs.io/'
 #   '233': 'https://www.baidu.com'
 #   '666': 'https://www.baidu.com'
