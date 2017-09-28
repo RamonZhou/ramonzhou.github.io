@@ -40,11 +40,11 @@ theme-color: 'default'  # pink or default
 postPatterns: 'circuitBoard'
 
 # SNS settings 配置社交网站url: weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
-# sns:
-  # weibo: '//weibo.com/lovecolcol'
-  # juejin: '//juejin.im/user/57a6f434165abd006159b4cc'
-  # instagram: '//www.instagram.com/steveliaocn'
-  # github: '//github.com/kaeyleo'
+sns:
+  zhihu: 'https://zhihu.com/people/anthony-29-73-28/activities'
+  github: 'https://github.com/anthonyledger'
+  twitter: 'https://twitter.com/AnthonyLedgerX'
+  facebook: 'https://www.facebook.com/anthony.ledger.7509'
 
 # Tags 设置标签
 recommend-tags: true # whether or not display recommend-tags on the sidebar
@@ -65,3 +65,10 @@ RSS: false
 
 # Plugins
 plugins: [jekyll-paginate]
+
+# Friends Link
+links:
+  'Dance_of_Faith' : 'http://blog.csdn.net/zj_yuneng/'
+  'Samsara_Karma' : 'http://blog.163.com/James_Chen0306/'
+#   '233': 'https://www.baidu.com'
+#   '666': 'https://www.baidu.com'

@@ -81,6 +81,22 @@ header-img: /assets/img/index-header.jpg
                 {% endif %}
             </section>
 
+            {% if site.links.size > 0 %}
+                <section class="friends_links">
+                    <div>友链</div>
+                    <ul>
+                        {% for s in site.links %}
+                        <li>
+                            <a href="{{ s[1] }}" target="_blank">
+                                <span>- {{ s[0] }} -</span>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            {% endif %}
+
+
             {% if site.recommend-tags and site.tags.size>0 %}
             <section class="tags-card">
                 {% for tag in site.tags %}
