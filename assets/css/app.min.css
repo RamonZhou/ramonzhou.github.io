@@ -354,7 +354,7 @@ a {
     display: inline-block;
     width: 18px;
     height: 18px;
-    background: url(../icons/date.svg) no-repeat center;
+    /*background: url(../icons/date.svg) no-repeat center;*/
     background-size: 100%
 }
 
@@ -750,7 +750,7 @@ a {
 }
 
 .post-header .post-meta {
-    margin-top: 32px
+    margin-top: 28px
 }
 
 .post-header .post-meta .post-meta-item {
@@ -840,7 +840,7 @@ a {
     width: 100%;
     background-color: #fff;
     overflow: hidden;
-    padding: 40px 0 80px
+    padding: 50px 0 80px
 }
 
 .post-content .post-subtitle {
@@ -878,7 +878,7 @@ a {
     font-family: Merriweather-Light, -apple-system, Verdana, "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     width: 720px;
     box-sizing: border-box;
-    padding: 0 0 32px
+    padding: 0 0 60px
 }
 
 .markdown-body .highlight {
@@ -1500,7 +1500,7 @@ a {
 }
 
 .friends_links {
-    margin: 0 15px;
+    margin: 0 10px;
     font-family: Merriweather-light;
 }
 

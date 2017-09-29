@@ -5,7 +5,8 @@ date: 2017-09-27
 author: Deluxurous
 cover: '/assets/img/helloworld.jpg'
 tags: Blog
-latestupdate: 2017-09-27-19-28
+update: 1
+latest: 2017-09-29
 ---
 
 打算建博客，但是又想有点自己个性化的空间，于是在Github Pages上用[Jekyll](https://jekyllrb.com/)搭了这个blog。
@@ -20,6 +21,8 @@ latestupdate: 2017-09-27-19-28
 
 欢迎交换友链哦~
 
+-=-=-=-=-=-=-=-=-=-=-=-=-
+
 17-09-28 Update: 可以支持显示公式啦~ Like this: $\displaystyle f(a)=\frac{1}{2\pi i}\oint_{\gamma}\frac{f(z)}{z-a}dz$ 不过公式完全显示好像要稍等一下下... //based on [MathJax](https://www.mathjax.org/)
 
 同时可以支持代码高亮啦！//based on [Prism.js](http://prismjs.com/)
@@ -28,3 +31,9 @@ latestupdate: 2017-09-27-19-28
 		puts("hello world!");
 	};
 </code></pre>
+
+<br>
+
+-=-=-=-=-=-=-=-=-=-=-=-=-
+
+17-09-29 Update: 修改了一些icon，自己魔改添加了一个“最近更新”的显示……捣鼓了好久233333  主要没找到Liquid怎么判断一个变量是否被定义了……如果有大佬知道记得告诉我QAQ

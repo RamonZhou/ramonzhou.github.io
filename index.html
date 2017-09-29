@@ -43,7 +43,10 @@ header-img: /assets/img/index-header.jpg
                             {% endfor %}
                         {% endif %}
                     </div>
-                    <time class="post-date" datetime="{{ post.date | date:"%y-%m-%d" }}">{{ post.date | date_to_string }}</time>
+                    {% if post.update == 1 %}
+                    <time class="post-date" datetime="{{ post.latest | latest:"%y-%m-%d" }}"><i class="iconfont icon-update2"></i> {{ post.latest | date_to_string }}</time>
+                    {% endif %}
+                    <time class="post-date" datetime="{{ post.date | date:"%y-%m-%d" }}"><i class="iconfont icon-date"></i> {{ post.date | date_to_string }}</time>
                 </footer>
             </article>
         {% endfor %}
@@ -83,7 +86,7 @@ header-img: /assets/img/index-header.jpg
 
             {% if site.links.size > 0 %}
                 <section class="friends_links">
-                    <div>友链</div>
+                    <div>·友链·</div>
                     <ul>
                         {% for s in site.links %}
                         <li>
