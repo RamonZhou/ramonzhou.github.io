@@ -20,9 +20,9 @@
         </div>
         <h1>{{ page.title }}</h1>
         <div class="post-meta">
-            <span class="post-meta-item"><i class="iconfont icon-author"></i><a href="{{ site.url }}" target="_blank" rel="author">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a></></span>
-            <time class="post-meta-item" datetime="{{ page.date | date:"%y-%m-%d" }}"><i class="iconfont icon-date">
-            </i>{{ page.date | date_to_string }}</time>
+            <span class="post-meta-item"><i class="iconfont icon-author"></i>Author : <a href="{{ site.url }}" target="_blank" rel="author">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a></></span>
+            <br/>
+            <time class="post-meta-item" datetime="{{ page.date | date:"%y-%m-%d" }}"><i class="iconfont icon-date"></i>Release Date : {{ page.date | date_to_string }}</time>
             <br/>
             {% if page.update == 1 %}
             <time class="post-meta-item" datetime="{{ page.latest | latest:"%y-%m-%d" }}"><i class="iconfont icon-update2"></i>Latest Update :  {{ page.latest | date_to_string }} </time>

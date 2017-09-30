@@ -1258,7 +1258,7 @@ a {
         float: none;
         margin: 0 auto
     }
-    .g-sidebar, .search-card {
+    .g-sidebar, .search-card, .cloudmusic {
         display: none
     }
     .pagination .page-num {
@@ -1394,7 +1394,8 @@ a {
         letter-spacing: 6px
     }
     .home-banner .header-img {
-        width: 695px;
+        /*width: 695px;*/
+        height: 400px;
         left: -100px
     }
     .home-content {
