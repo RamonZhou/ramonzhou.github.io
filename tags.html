@@ -15,7 +15,7 @@ layout: default
         <li>
         {% if site.recommend-tags and site.tags.size>0 %}
             {% for tag in site.tags %}
-            <a href="#{{ tag[0] }}" class="tag">{{ tag[0]}}</a>
+            <a href="#{{ tag[0] }}" class="tag">{{ tag[0] }}</a>
             {% endfor %}
         {% endif %}
         </li>
@@ -31,5 +31,19 @@ layout: default
         {% endfor%}
     </ul>
 </main>
+
+<script type="text/javascript">
+console.log(1);
+function getArgsFromHref(sArgName){
+var url = window.location.href;
+    var args=url.split("#");
+    if(args[0]==url)
+        return "";
+    var str=args[1];
+    return str;
+}
+var tmp=getArgsFromHref('');
+console.log(tmp);
+</script>
     
 {% include footer.html %}
