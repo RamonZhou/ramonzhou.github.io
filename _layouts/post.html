@@ -162,7 +162,7 @@ MathJax.Hub.Config({
 <!-- ****** -->
 <script type="text/javascript">
     var arr=document.getElementsByTagName("h2");
-    console.log(arr.length);
+    // console.log(arr.length);
     Array.prototype.forEach.call(arr, function(item, index, array) {
         item.setAttribute('id','anchor' + (1+index));
     });
@@ -177,7 +177,7 @@ MathJax.Hub.Config({
     }
     function buildCatalog() {
         obj=document.getElementById("catalog-links");
-        console.log(document.documentElement.clientWidth);
+        // console.log(document.documentElement.clientWidth);
         if(arr.length==0 || document.documentElement.clientWidth <= 1300) {
             document.getElementById("catalog").style.display='none';
             return;
