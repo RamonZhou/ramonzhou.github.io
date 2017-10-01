@@ -43,7 +43,7 @@ header-img: /assets/img/index-header.jpg
                             {% endfor %}
                         {% endif %}
                     </div>
-                    {% if post.update == 1 %}
+                    {% if post.latest %}
                     <time class="post-date" datetime="{{ post.latest | latest:"%y-%m-%d" }}"><i class="iconfont icon-update2"></i> {{ post.latest | date_to_string }}</time>
                     {% endif %}
                     <time class="post-date" datetime="{{ post.date | date:"%y-%m-%d" }}"><i class="iconfont icon-date"></i> {{ post.date | date_to_string }}</time>

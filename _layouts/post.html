@@ -9,7 +9,7 @@
 
 {% include header.html %}
 
-<header class="g-banner post-header {{ site.postPatterns | prepend: 'post-pattern-' }} {{ site.theme-color | prepend: 'bgcolor-' }} {% unless page.cover %}post-no-cover{% endunless %}" data-theme="{{ site.theme-color }}">
+<header id="anchorHead" class="g-banner post-header {{ site.postPatterns | prepend: 'post-pattern-' }} {{ site.theme-color | prepend: 'bgcolor-' }} {% unless page.cover %}post-no-cover{% endunless %}" data-theme="{{ site.theme-color }}">
     <div class="post-wrapper">
         <div class="post-tags">
             {% if page.tags.size > 0 %} 
@@ -24,7 +24,7 @@
             <br/>
             <time class="post-meta-item" datetime="{{ page.date | date:"%y-%m-%d" }}"><i class="iconfont icon-date"></i>Release Date : {{ page.date | date_to_string }}</time>
             <br/>
-            {% if page.update == 1 %}
+            {% if page.latest %}
             <time class="post-meta-item" datetime="{{ page.latest | latest:"%y-%m-%d" }}"><i class="iconfont icon-update2"></i>Latest Update :  {{ page.latest | date_to_string }} </time>
             {% endif %}
         </div>
@@ -35,7 +35,14 @@
     {% endif %}
 </header>
 
+
 <div class="post-content">
+    <div id="catalog">
+        <div class="catalog-title">博文目录</div>
+        <div class="catalog-text" id="catalog-links">
+            <a class="anchorLink" onclick="ScrollToAnchor('#anchorHead')"><i class="iconfont icon-top"></i> 回到顶部 <br/></a>
+        </div>
+    </div>
     {% if page.subtitle %}
     <h2 class="post-subtitle">{{ page.subtitle }}</h2>
     {% endif %}
@@ -137,6 +144,7 @@ s.setAttribute('data-timestamp', +new Date());
 <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
 <script src="/assets/js/prism.js"></script>
 <script src="/assets/js/index.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
 <!-- mathjax config similar to math.stackexchange --> 
 <script type="text/x-mathjax-config">
@@ -150,6 +158,85 @@ MathJax.Hub.Config({
     messageStyle: "none",
     "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
 });
+</script>
+<!-- ****** -->
+<script type="text/javascript">
+    var arr=document.getElementsByTagName("h2");
+    console.log(arr.length);
+    Array.prototype.forEach.call(arr, function(item, index, array) {
+        item.setAttribute('id','anchor' + (1+index));
+    });
+    function buildPart(json){
+        var oPart = document.createElement(json.selector);
+        if(json.id){oPart.setAttribute('id',json.id);}
+        if(json.className){oPart.className = json.className;}
+        if(json.innerHTML){oPart.innerHTML = json.innerHTML;}
+        if(json.onclick){oPart.setAttribute('onclick',json.onclick);}
+        if(json.href){oPart.setAttribute('href',json.href);}
+        return oPart;
+    }
+    function buildCatalog() {
+        obj=document.getElementById("catalog-links");
+        console.log(document.documentElement.clientWidth);
+        if(arr.length==0 || document.documentElement.clientWidth <= 1300) {
+            document.getElementById("catalog").style.display='none';
+            return;
+        } else document.getElementById("catalog").style.opacity=1;
+        len=arr.length;
+        for(var i=0;i<len;i++) {
+            obj.appendChild(buildPart({
+                selector:'a',
+                className:'anchorLink',
+                href:'',
+                onclick:'ScrollToAnchor("#anchor'+(i+1)+'");',
+                innerHTML:'<i class="iconfont icon-circlehollow"></i> ' + arr[i].innerHTML + '<br/>'
+            }));
+        }
+    }
+    buildCatalog();
+</script>
+<script>
+    function ScrollToAnchor(id){
+        $("html, body").animate({
+        scrollTop: $(id).offset().top - 50}, {duration: 500,easing: "swing"});
+    };
+    $.fn.smartFloat = function() {
+        var position = function(element) {
+            var oritop = element.position().top, top = element.offset().top, pos = element.css("position");
+            var father = element.parent(), height = element.height(), bottom = oritop + father.height();
+            function JudgeScroll() {
+                var scrolls = $(this).scrollTop();
+                if (scrolls > top - 90 && scrolls < bottom + top- height - 180) {
+                    if (window.XMLHttpRequest) {
+                        element.css({
+                            position: "fixed",
+                            top: 90
+                        });
+                    } else {
+                        element.css({
+                            top: scrolls
+                        });
+                    }
+                } else if(scrolls <= top - 90) {
+                    element.css({
+                        position: "relative",
+                        top: 0
+                    });
+                } else if(scrolls >= bottom + top - height - 180) {
+                    element.css({
+                        position: "relative",
+                        top: bottom - height - 90
+                    });
+                }
+            }
+            $(document).ready(JudgeScroll);
+            $(window).scroll(JudgeScroll);
+        };
+        return $(this).each(function() {
+            position($(this));                         
+        });
+    };
+    $("#catalog").smartFloat();
 </script>
 </body>
 </html>

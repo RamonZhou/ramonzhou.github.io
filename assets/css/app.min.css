@@ -1250,6 +1250,12 @@ a {
     }
 }
 
+@media screen and (max-width:1300px) {
+    #catalog {
+        display: none;
+    }
+}
+
 @media screen and (max-width:960px) {
     .g-container {
         width: auto
@@ -1507,4 +1513,53 @@ a {
 
 .friends_links_text {
     color: #1494FB;
+}
+
+#catalog {
+    /*position: relative;*/
+    margin-left: 50px;
+    float: left;
+    padding: 30px 20px;
+    background-color: #fcfcfc;
+    border: 2px solid rgb(56, 185, 251);
+    border-radius: 8px;
+    height: 460px;
+    width: 180px;
+    /*overflow: scroll;*/
+    box-shadow: 7px 8px 8px rgba(0, 37, 55, .06);
+    opacity: 0;
+}
+
+#catalog {
+    transition: background-color 0.5s, box-shadow 0.5s;
+    -moz-transition: background-color 0.5s, box-shadow 0.5s;  /* Firefox 4 */
+    -webkit-transition: background-color 0.5s, box-shadow 0.5s;   /* Safari & Chrome */
+    -o-transition: background-color 0.5s, box-shadow 0.5s;    /* Opera */
+}
+
+#catalog:hover {
+    /*background-color: rgba(243, 182, 9, 0.19);*/
+    background-color: rgba(210,210,210,0.20);
+    box-shadow: 9px 10px 10px rgba(19, 19, 19, .08);
+}
+
+.catalog-title {
+    font-size: 150%;
+    color: #000000;
+    border-bottom: 1px solid #ececec;
+}
+
+.catalog-text {
+    font-family: MerriWeather;
+}
+
+.anchorLink {
+    transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+}
+
+.anchorLink:hover {
+    color: #2E9FFF;
 }

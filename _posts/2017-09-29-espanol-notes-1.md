@@ -5,7 +5,6 @@ date: 2017-09-29
 author: Deluxurous
 cover: '/assets/img/espanol-notes-1.jpg'
 tags:  Español
-update: 1
 latest: 2017-09-30
 ---
 

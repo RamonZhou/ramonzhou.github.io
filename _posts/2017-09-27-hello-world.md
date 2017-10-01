@@ -5,8 +5,7 @@ date: 2017-09-27
 author: Deluxurous
 cover: '/assets/img/helloworld.jpg'
 tags: Blog
-update: 1
-latest: 2017-09-29
+latest: 2017-10-01
 ---
 
 打算建博客，但是又想有点自己个性化的空间，于是在Github Pages上用[Jekyll](https://jekyllrb.com/)搭了这个blog。
@@ -37,3 +36,13 @@ latest: 2017-09-29
 -=-=-=-=-=-=-=-=-=-=-=-=-
 
 17-09-29 Update: 修改了一些icon，自己魔改添加了一个“最近更新”的显示……捣鼓了好久233333  主要没找到Liquid怎么判断一个变量是否被定义了……如果有大佬知道记得告诉我QAQ
+
+-=-=-=-=-=-=-=-=-=-=-=-=-
+
+17-10-01 Update: <span style="color:red">国庆快乐！</span>
+
+自己胡乱糊了一个可以自动生成的博文目录……好点丑……到时候得再搞搞QwQ
+
+可惜还没想好怎么把这个目录藏起来，于是屏幕宽度小于1300的时候我就自动隐藏了。。╮(─▽─)╭
+
+然后我好像知道怎么判断Liquid的变量定义了……我还是好Naive啊
