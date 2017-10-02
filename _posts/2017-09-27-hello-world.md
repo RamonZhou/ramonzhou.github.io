@@ -5,7 +5,7 @@ date: 2017-09-27
 author: Deluxurous
 cover: '/assets/img/helloworld.jpg'
 tags: Blog
-latest: 2017-10-01
+latest: 2017-10-02
 ---
 
 打算建博客，但是又想有点自己个性化的空间，于是在Github Pages上用[Jekyll](https://jekyllrb.com/)搭了这个blog。
@@ -48,3 +48,7 @@ latest: 2017-10-01
 然后我好像知道怎么判断Liquid的变量定义了……我还是好Naive啊
 
 提点另外的，加泰又搞了个独立公投……这样闹来闹去的好蓝瘦啊……
+
+-=-=-=-=-=-=-=-=-=-=-=-=-
+
+17-10-02 Update: 终于放假啦！今天写了个Tags的筛选功能……不知道为什么模板里没有这个功能\-\_\-……
