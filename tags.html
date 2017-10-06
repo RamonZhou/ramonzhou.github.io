@@ -12,10 +12,10 @@ layout: default
 <main class="tags-content">
 
     <ul class="tags-list">
-        <li>
+        <li id="fav-tags">
         {% if site.recommend-tags and site.tags.size>0 %}
             {% for tag in site.tags %}
-            <a href="#{{ tag[0] }}" onclick="location.assign('#{{ tag[0] }}');filter();" class="tag">{{ tag[0] }}</a>
+            <a href="#{{ tag[0] }}" onclick="location.assign('#{{ tag[0] }}');filter();" class="tag" id="list-{{ tag[0] }}">{{ tag[0] }}</a>
             {% endfor %}
         {% endif %}
         </li>
@@ -32,6 +32,15 @@ layout: default
 </main>
 
 <script type="text/javascript">
+    function buildPart(json){
+        var oPart = document.createElement(json.selector);
+        if(json.id){oPart.setAttribute('id',json.id);}
+        if(json.className){oPart.className = json.className;}
+        if(json.innerHTML){oPart.innerHTML = json.innerHTML;}
+        if(json.onclick){oPart.setAttribute('onclick',json.onclick);}
+        if(json.href){oPart.setAttribute('href',json.href);}
+        return oPart;
+    }
     function getArgsFromHref(sArgName){
     var url = window.location.href;
         var args=url.split("#");
@@ -43,6 +52,7 @@ layout: default
     function filter() {
         var tmp=getArgsFromHref('');
         if(tmp!="") {
+            otmp=tmp;
             tmp='post-'+tmp;
             console.log(tmp);
             var arr=document.getElementsByClassName("fav-posts");
@@ -55,6 +65,30 @@ layout: default
                 } else {
                     arr[i].style.display='block';
                 }
+            }
+            arr=document.getElementsByClassName("tag");
+            len=arr.length;
+            for(var i=0;i<len;i++) {
+                arr[i].style.color='#a6abb2'
+            }
+            var obtag=document.getElementById("list-"+otmp);
+            obtag.style.color="#123456";
+            var obj=document.getElementById("fav-tags"), exist=document.getElementById("clear-tags");
+            if(exist) return;
+            obj.appendChild(buildPart({
+                id:"clear-tags",
+                className:"tag",
+                href:"{{ site.baseurl }}tags.html",
+                onclick:"location.assign('{{ site.baseurl }}tags.html')",
+                innerHTML:"取消已选"
+            }));
+        } else {
+            var obj=document.getElementById("clear-tags");
+            obj.parentNode.removeChild(obj);
+            var arr=document.getElementsByClassName("tag");
+            var len=arr.length;
+            for(var i=0;i<len;i++) {
+                arr[i].style.color='#a6abb2'
             }
         }
     }

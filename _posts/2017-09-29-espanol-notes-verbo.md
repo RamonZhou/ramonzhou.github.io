@@ -5,7 +5,7 @@ date: 2017-09-29
 author: Deluxurous
 cover: '/assets/img/espanol-notes-1.jpg'
 tags:  Español
-latest: 2017-09-30
+latest: 2017-10-06
 ---
 
 唔，陆续地做点笔记吧……不然到时候忘光了……
@@ -17,11 +17,12 @@ latest: 2017-09-30
 
 ## 规则动词变位
 
-|规则动词类型|陈述式现在时变位|
-|---|---|
-|-ar|-o / -as / -a / -amos / -áis / -an|
-|-er|-o / -es / -e / -emos / -éis / -en|
-|-ir|-o / -es / -e / -imos / -ís / -en|
+|时态|-ar|-er|-ir|
+|---|---|---|---|
+|陈述式现在时*(Indicativo Presente)*|-o / -as / -a / -amos / -áis / -an|-o / -es / -e / -emos / -éis / -en|-o / -es / -e / -imos / -ís / -en|
+|陈述式简单过去时*(Indicativo Pretérito Perfecto Simple)*|-é / -aste / -ó / -amos / -asteis / -aron|-í / -iste / -ió / -imos / -isteis / -ieron|-í / -iste / -ió / -imos / -isteis / -ieron|
+|虚拟式现在时*(Subjuntivo Presente)*|-e / -es / -e / -emos / -éis / -en|-a / -as / -a / -amos / -áis / -an|-a / -as / -a / -amos / -áis / -an|
+|命令式*(Imperativo)*|~ / -a / -e / -emos / -ad / -en|~ / -e / -a / -amos / -ed / -an|~ / -e / -a / -amos / -id / -an|
 
 栗子：
 
