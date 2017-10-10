@@ -66,6 +66,7 @@ plugins: [jekyll-paginate]
 
 # Friends Link
 links:
+  'bbbblzy': 'http://blog.csdn.net/bbbblzy'
   'BEYOND_DELIBERATE' : 'https://www.cnblogs.com/the-unbeatable/'
   'czl_233' : 'http://blog.csdn.net/czl_233/'
   'Dance_of_Faith' : 'http://blog.csdn.net/zj_yuneng/'
@@ -76,8 +77,12 @@ links:
   'jxcakak' : 'https://www.cnblogs.com/jxcakak/'
   'logic-yzf' : 'https://www.cnblogs.com/logic-yzf/'
   'orbitingflea' : 'https://orbitingflea.github.io/'
+  'PinkExSu0v0' : 'http://www.cnblogs.com/whc200305/'
   'Samsara_Karma' : 'http://blog.163.com/James_Chen0306/'
   'tttnns-blog' : 'https://tttnns-blog.readthedocs.io/'
+  'Styx-ferryman' : 'http://www.cnblogs.com/stxy-ferryman/'
+  'zjh_2017' : 'http://blog.csdn.net/zjh_2017'
+  '柴犬首相': 'http://blog.csdn.net/qq_39670434'
   '咸鱼Fey' : 'https://www.cnblogs.com/sffey/'
 #   '233': 'https://www.baidu.com'
 #   '666': 'https://www.baidu.com'

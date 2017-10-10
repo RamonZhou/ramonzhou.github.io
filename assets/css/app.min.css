@@ -38,6 +38,16 @@
     src: url(../fonts/zeroes.TTF)
 }
 
+@font-face {
+    font-family: Inder;
+    src: url(../fonts/Inder.otf);
+}
+
+@font-face {
+    font-family: miso;
+    src: url(../fonts/miso.otf);
+}
+
 body, html {
     height: 100%
 }
