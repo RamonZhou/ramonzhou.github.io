@@ -5,7 +5,7 @@ date: 2017-10-09
 author: Deluxurous
 cover: '/assets/img/data-structure.png'
 categories: OI
-tags: Data_Structure Persistent
+tags: 数据结构 主席树
 latest: 2017-10-13
 ---
 

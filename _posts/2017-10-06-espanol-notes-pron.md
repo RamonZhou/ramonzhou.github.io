@@ -5,7 +5,7 @@ date: 2017-10-06
 author: Deluxurous
 cover: '/assets/img/espanol-notes-2.jpg'
 categories: Español
-tags: Grammar
+tags: 语法
 ---
 
 这次来讲讲丰富的代词系统吧

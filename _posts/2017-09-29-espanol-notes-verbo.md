@@ -5,7 +5,7 @@ date: 2017-09-29
 author: Deluxurous
 cover: '/assets/img/espanol-notes-1.jpg'
 categories: Español
-tags: Grammar Vocabulary
+tags: 语法 词汇
 latest: 2017-10-06
 ---
 
