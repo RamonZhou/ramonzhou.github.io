@@ -1,11 +1,37 @@
 @font-face {
-    font-family: Merriweather;
-    src: url(../fonts/Merriweather-Black.ttf)
+    font-family: Lato;
+    /*src: url(../fonts/Merriweather-Black.ttf)*/
+    src: url(../fonts/Lato-Regular.ttf),
+         url(../fonts/Lato-Regular.woff),
+         url(../fonts/Lato-Regular.woff2),
+         url(../fonts/Lato-Regular.eot);
 }
 
 @font-face {
-    font-family: Merriweather-Light;
-    src: url(../fonts/Merriweather-Light.ttf)
+    font-family: Lato;
+    font-style: italic;
+    src: url(../fonts/Lato-Italic.ttf),
+         url(../fonts/Lato-Italic.woff),
+         url(../fonts/Lato-Italic.woff2),
+         url(../fonts/Lato-Italic.eot);
+}
+
+@font-face {
+    font-family: Lato-Light;
+    /*src: url(../fonts/Merriweather-Light.ttf)*/
+    src: url(../fonts/Lato-Light.ttf),
+         url(../fonts/Lato-Light.woff),
+         url(../fonts/Lato-Light.woff2),
+         url(../fonts/Lato-Light.eot);
+}
+
+@font-face {
+    font-family: Lato-Light;
+    font-style: italic;
+    src: url(../fonts/Lato-LightItalic.ttf),
+         url(../fonts/Lato-LightItalic.woff),
+         url(../fonts/Lato-LightItalic.woff2),
+         url(../fonts/Lato-LightItalic.eot);
 }
 
 @font-face {
@@ -63,7 +89,8 @@ body {
     font-family: -apple-system, Verdana, "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     color: #656565;
     -webkit-font-smoothing: antialiased;
-    background-color: #f7f8fa
+    background-color: #f7f8fa;
+    z-index: 2;
 }
 
 ul {
@@ -275,14 +302,53 @@ a {
 }
 
 .article-list .article-item {
+    display: block;
+    position: relative;
+    z-index:1;
     width: 100%;
     margin-bottom: 16px;
-    padding: 30px 20px;
+    padding: 30px 20px 25px 20px;
     background-color: #fff;
-    border: 1px solid #e7eaf1;
-    border-radius: 3px;
     box-sizing: border-box;
-    box-shadow: 0 1px 3px rgba(0, 37, 55, .06)
+    border: 1px solid #e7eaf1;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 37, 55, .06);
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+    overflow: hidden;
+}
+
+.article-list .article-item:before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    /*top: 50%;*/
+    left: 100%;
+    z-index: 0;
+    margin: 10% 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 50% 50%;
+    background-color: #14B0FB;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    -webkit-transition: -webkit-transform 0.4s ease-in-out, box-shadow 0.3s;
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s;
+    /*-webkit-transition-timing-function: cubic-bezier(0.7,0,0.9,1);*/
+    /*transition-timing-function: cubic-bezier(0.7,0,0.9,1);*/
+}
+
+.article-list .article-item:hover:before {
+    /*-webkit-transform-origin: 100% 50%;*/
+    /*transform-origin: 100% 50%;*/
+    -webkit-transform: scale3d(4,4,1);
+    transform: scale3d(4,4,1);
+}
+
+.article-list .article-item:hover{
+    box-shadow: 6px 6px 12px rgba(0, 37, 55, .08);
+    cursor:pointer;
 }
 
 .article-list .article-item:last-child {
@@ -311,14 +377,24 @@ a {
 }
 
 .article-list .article-item .post-preview {
-    position: relative
+    position: relative;
+    transition: color 0.3s ease-in-out .1s;
+}
+
+.article-list .article-item:hover .post-preview{
+    color: #fff;
 }
 
 .article-list .article-item .post-preview .post-title {
-    font-family: Merriweather, -apple-system, Verdana, "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-family: Lato, -apple-system, Verdana, "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     color: #4e4e4e;
     font-size: 24px;
-    line-height: 32px
+    line-height: 32px;
+    transition: color 0.3s ease-in-out .1s;
+}
+
+.article-list .article-item:hover .post-preview .post-title{
+    color: #fff;
 }
 
 .article-list .article-item .post-preview .post-subtitle {
@@ -329,21 +405,32 @@ a {
     line-height: 26px
 }
 
+.article-list .article-item:hover .post-preview .post-subtitle {
+    color: #fff;
+}
+
 .article-list .article-item .post-preview .post-excerpt {
     margin-top: 8px;
     font-size: 16px;
-    font-family: Merriweather-Light, -apple-system, Verdana, "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-family: Lato-Light, -apple-system, Verdana, "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     line-height: 26px
 }
 
 .article-list .article-item .post-meta {
     height: 22px;
-    margin-top: 16px
+    margin-top: 16px;
+    position: relative;
 }
 
 .article-list .article-item .post-meta .post-tags {
     float: left;
-    display: inline-block
+    color: #a9b0bc;
+    display: inline-block;
+    transition: color 0.3s ease-in-out .1s
+}
+
+.article-list .article-item:hover .post-meta .post-tags {
+    color: #fff;
 }
 
 .article-list .article-item .post-meta .post-date {
@@ -352,7 +439,12 @@ a {
     display: inline-block;
     font-size: 14px;
     letter-spacing: .6px;
-    line-height: 22px
+    line-height: 22px;
+    transition: color 0.3s ease-in-out .1s
+}
+
+.article-list .article-item:hover .post-meta .post-date {
+    color: #fff;
 }
 
 .article-list .article-item .post-meta .post-date:before {
@@ -492,18 +584,29 @@ a {
     box-sizing: border-box;
     box-shadow: 0 0 .6px #d5dae1;
     border-radius: 2px;
-    background-color: #fafafa;
+    background-color: rgba(238,238,238,.6);
     cursor: pointer;
     margin-right: 2px;
-    transition: .2s
+    transition: background-color .1s ease-in-out .1s, color .2s;
+    /*transition: background-color .4s;*/
 }
 
 .article-item .post-meta .post-tag:last-child, .tags-card .tag:last-child, .tags-content .tag:last-child {
     margin-right: 0
 }
 
+
 .article-item .post-meta .post-tag:hover, .tags-card .tag:hover, .tags-content .tag:hover {
-    color: #83888f
+    color: #666
+}
+
+.article-item:hover .post-meta .post-tag {
+    color: #fff;
+    background-color: rgba(187,187,187,.5);
+}
+
+.article-item:hover .post-meta .post-tag:hover {
+    color: #022958
 }
 
 .g-sidebar-wrapper {
@@ -721,7 +824,7 @@ a {
 }
 
 .post-header .post-tags {
-    margin: 150px 0 16px
+    margin: 140px 0 16px
 }
 
 .post-header .post-tags .post-tag {
@@ -885,7 +988,7 @@ a {
 }
 
 .markdown-body {
-    font-family: Merriweather-Light, -apple-system, Verdana, "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-family: Lato, -apple-system, Verdana, "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     width: 720px;
     box-sizing: border-box;
     padding: 0 0 60px
@@ -1518,7 +1621,7 @@ a {
 
 .friends_links {
     margin: 0 10px;
-    font-family: Merriweather-light;
+    font-family: Lato;
 }
 
 .friends_links_text {
@@ -1560,7 +1663,7 @@ a {
 }
 
 .catalog-text {
-    font-family: -apple-system, "Merriweather-Light", "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "sans-serif";
+    font-family: -apple-system, "Lato", "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "sans-serif";
 }
 
 .anchorLink {

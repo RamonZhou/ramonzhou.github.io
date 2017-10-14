@@ -4,7 +4,8 @@ title: '西语学习笔记 - 动词变位（持更）'
 date: 2017-09-29
 author: Deluxurous
 cover: '/assets/img/espanol-notes-1.jpg'
-tags:  Español
+categories: Español
+tags: Grammar Vocabulary
 latest: 2017-10-06
 ---
 

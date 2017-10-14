@@ -4,6 +4,7 @@ title: 'Hello World'
 date: 2017-09-27
 author: Deluxurous
 cover: '/assets/img/helloworld.jpg'
+categories: Others
 tags: Blog
 latest: 2017-10-02
 ---

@@ -8,6 +8,7 @@ baseurl: ''
 # Navigation links
 nav:
   home: '/'
+  categories: '/categories/html'
   tags: '/tags.html'
 
 # Author 配置博主信息
@@ -62,7 +63,7 @@ kramdown:
 RSS: false
 
 # Plugins
-plugins: [jekyll-paginate]
+plugins: [jekyll-paginate, jekyll-admin]
 
 # Friends Link
 links:
@@ -84,5 +85,3 @@ links:
   'zjh_2017' : 'http://blog.csdn.net/zjh_2017'
   '柴犬首相': 'http://blog.csdn.net/qq_39670434'
   '咸鱼Fey' : 'https://www.cnblogs.com/sffey/'
-#   '233': 'https://www.baidu.com'
-#   '666': 'https://www.baidu.com'

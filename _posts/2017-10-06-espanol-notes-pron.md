@@ -4,7 +4,8 @@ title: '西语学习笔记 - 代词'
 date: 2017-10-06
 author: Deluxurous
 cover: '/assets/img/espanol-notes-2.jpg'
-tags:  Español
+categories: Español
+tags: Grammar
 ---
 
 这次来讲讲丰富的代词系统吧
