@@ -40,7 +40,7 @@ header-img: /assets/img/index-header.jpg
                         <i class="iconfont icon-category"></i>
                         {% if post.categories.size > 0 %} 
                             {% for category in post.categories  %}
-                        <a href="{{ site.baseurl }}tags.html#{{ category }}" class="post-tag">{{ category }}</a>
+                        <a href="{{ site.baseurl }}categories.html#{{ category }}" class="post-tag">{{ category }}</a>
                             {% endfor %}
                         {% endif %}
                     </div>
@@ -57,6 +57,12 @@ header-img: /assets/img/index-header.jpg
                     </div>
                     {% if post.latest %}
                     <time class="post-date" datetime="{{ post.latest | latest:"%y-%m-%d" }}"><i class="iconfont icon-update2"></i> {{ post.latest | date_to_string }}</time>
+                    {% endif %}
+                </footer>
+                <footer class="post-meta2" style="margin-top: 5px">
+                    <time class="post-date" id="rel-date" datetime="{{ post.date | date:"%y-%m-%d" }}"><i class="iconfont icon-date"></i> {{ post.date | date_to_string }}</time>
+                    {% if post.latest %}
+                    <time class="post-date" id="upd-date" datetime="{{ post.latest | latest:"%y-%m-%d" }}"><i class="iconfont icon-update2"></i> {{ post.latest | date_to_string }}</time>
                     {% endif %}
                 </footer>
             </article>

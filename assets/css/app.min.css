@@ -1,6 +1,5 @@
 @font-face {
     font-family: Lato;
-    /*src: url(../fonts/Merriweather-Black.ttf)*/
     src: url(../fonts/Lato-Regular.ttf),
          url(../fonts/Lato-Regular.woff),
          url(../fonts/Lato-Regular.woff2),
@@ -18,7 +17,6 @@
 
 @font-face {
     font-family: Lato-Light;
-    /*src: url(../fonts/Merriweather-Light.ttf)*/
     src: url(../fonts/Lato-Light.ttf),
          url(../fonts/Lato-Light.woff),
          url(../fonts/Lato-Light.woff2),
@@ -32,6 +30,25 @@
          url(../fonts/Lato-LightItalic.woff),
          url(../fonts/Lato-LightItalic.woff2),
          url(../fonts/Lato-LightItalic.eot);
+}
+
+@font-face {
+    font-family: Lato;
+    font-weight: bold;
+    src: url(../fonts/Lato-Bold.ttf),
+         url(../fonts/Lato-Bold.woff),
+         url(../fonts/Lato-Bold.woff2),
+         url(../fonts/Lato-Bold.eot);
+}
+
+@font-face {
+    font-family: Lato;
+    font-weight: bold;
+    font-style: italic;
+    src: url(../fonts/Lato-BoldItalic.ttf),
+         url(../fonts/Lato-BoldItalic.woff),
+         url(../fonts/Lato-BoldItalic.woff2),
+         url(../fonts/Lato-BoldItalic.eot);
 }
 
 @font-face {
@@ -348,7 +365,7 @@ a {
 
 .article-list .article-item:hover{
     box-shadow: 6px 6px 12px rgba(0, 37, 55, .08);
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .article-list .article-item:last-child {
@@ -422,6 +439,13 @@ a {
     position: relative;
 }
 
+.article-list .article-item .post-meta2 {
+    height: 22px;
+    margin-top: 16px;
+    position: relative;
+    display: none;
+}
+
 .article-list .article-item .post-meta .post-tags {
     float: left;
     color: #a9b0bc;
@@ -444,6 +468,28 @@ a {
 }
 
 .article-list .article-item:hover .post-meta .post-date {
+    color: #fff;
+}
+
+.article-list .article-item .post-meta2 .post-date {
+    color: #a9b0bc;
+    z-index: 2;
+    display: none;
+    font-size: 14px;
+    letter-spacing: .6px;
+    line-height: 22px;
+    transition: color 0.3s ease-in-out .1s
+}
+
+.article-list .article-item .post-meta2 #rel-date {
+    float: left;
+}
+
+.article-list .article-item .post-meta2 #upd-date {
+    float: right;
+}
+
+.article-list .article-item:hover .post-meta2 .post-date {
     color: #fff;
 }
 
@@ -820,7 +866,7 @@ a {
     font-size: 35px;
     line-height: 42px;
     margin-bottom: 12px;
-    font-family: Erasitc, -apple-system, Verdana, "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei";
+    font-family: Cuprum, -apple-system, Verdana, "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei";
 }
 
 .post-header .post-tags {
@@ -1133,7 +1179,8 @@ a {
 }
 
 .tags-list {
-    padding: 40px 0
+    padding: 40px 0;
+    font-family: Lato, -apple-system, Verdana, "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
 .tags-list li {
@@ -1543,15 +1590,23 @@ a {
         line-height: 20px
     }
     .article-list .article-item .post-meta {
-        margin-top: 12px
+        display: none;
     }
-    .article-list .article-item .post-meta .post-tags {
+    .article-list .article-item .post-meta2 {
+        display: block;
+    }
+    .article-list .article-item .post-meta2 .post-date {
+        margin-top: 12px;
+        margin-left: 5px;
+        display: inline-block;
+    }
+    /*.article-list .article-item .post-meta .post-tags {
         display: none
-    }
-    .article-list .article-item .post-meta .post-date {
+    }*/
+    /*.article-list .article-item .post-meta #rel-date {
         float: left;
-        margin-left: 5px
-    }
+        margin-left: 5px;
+    }*/
     .pagination .page-links {
         box-shadow: none
     }
@@ -1624,8 +1679,13 @@ a {
     font-family: Lato;
 }
 
+
 .friends_links_text {
     color: #1494FB;
+}
+
+.friends_links li .friends_links_text:hover {
+    color: #1470FB;
 }
 
 #catalog {
