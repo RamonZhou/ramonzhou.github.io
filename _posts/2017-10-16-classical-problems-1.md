@@ -1,15 +1,17 @@
 ---
 layout: post
 title: '经典题目杂选1'
+excerpt: '现在连简单题都不会了……GG'
 date: 2017-10-09
 author: Deluxurous
 cover: '/assets/img/oi-problems.png'
 categories: OI
 tags: 杂题
-latest: 2017-10-16
+latest: 2017-10-18
 ---
 
 现在连简单题都不会了……GG。
+
 
 ## I 正整数拆分
 
