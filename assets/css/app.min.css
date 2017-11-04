@@ -327,7 +327,7 @@ a {
     padding: 30px 20px 25px 20px;
     background-color: #fff;
     box-sizing: border-box;
-    border: 1px solid #e7eaf1;
+    border: 1.5px solid #e7eaf1;
     border-radius: 10px;
     box-shadow: 0 1px 3px rgba(0, 37, 55, .06);
     transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
@@ -408,6 +408,10 @@ a {
     font-size: 24px;
     line-height: 32px;
     transition: color 0.3s ease-in-out .1s;
+}
+
+.article-list .article-item .post-preview .top-title {
+    color: #FF9369;
 }
 
 .article-list .article-item:hover .post-preview .post-title{
