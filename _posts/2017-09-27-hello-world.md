@@ -6,7 +6,7 @@ author: Deluxurous
 cover: '/assets/img/helloworld.jpg'
 categories: Others
 tags: 博客相关 杂谈
-latest: 2017-10-14
+latest: 2017-11-09
 ---
 
 打算建博客，但是又想有点自己个性化的空间，于是在Github Pages上用[Jekyll](https://jekyllrb.com/)搭了这个blog。
@@ -59,3 +59,9 @@ latest: 2017-10-14
 17-10-14 Update: 最终还是暂时关闭了丑丑的博文导航/(ㄒoㄒ)/~~ 其他的么，换了一些字体，添加了“分类”（原来怎么只有标签啊……），还手动糊了点UI效果（然后发现其实我什么都不会）…… 
 
 唔 话说Disqus好像得番樯才能用，最近又翻不出去，所以可能考虑换个国内插件
+
+-=-=-=-=-=-=-=-=-=-=-=-=-
+
+17-11-09 Update: 添加了置顶功能~
+
+离NOIP还有2天，bless all。

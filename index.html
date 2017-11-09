@@ -17,17 +17,21 @@ header-img: /assets/img/index-header.jpg
 
 <main class="g-container home-content">
     <div class="article-list">
-        {% for post in paginator.posts %}
+        {% for post in site.posts %}
         {% if post.top==true %}
             <article class="article-item">
                 {% if post.cover %}
                 <div class="post-cover">
+                    {% if post.notice!=true %}
                     <a class="post-link" href="{{ post.url }}" title="{{ post.title }}"></a>
+                    {% endif %}
                     <img src="{{ post.cover }}" alt="">
                 </div>
                 {% endif %}
                 <section class="post-preview">
+                    {% if post.notice!=true %}
                     <a class="post-link" href="{{ post.url }}" title="{{ post.title }}"></a>
+                    {% endif %}
                     <h2 class="post-title top-title"><i class="iconfont icon-top" style="font-size:20px"></i> {{ post.title }}</h2>
                     {% if post.subtitle %}
                     <h3 class="post-subtitle">{{ post.subtitle }}</h3>
@@ -36,6 +40,7 @@ header-img: /assets/img/index-header.jpg
                     <p class="post-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 126}}</p>
                     {% endif %}
                 </section>
+                {% if post.notice!=true %}
                 <footer class="post-meta">
                     <div class="post-tags">
                         <i class="iconfont icon-category"></i>
@@ -66,6 +71,7 @@ header-img: /assets/img/index-header.jpg
                     <time class="post-date" id="upd-date" datetime="{{ post.latest | latest:"%y-%m-%d" }}"><i class="iconfont icon-update2"></i> {{ post.latest | date_to_string }}</time>
                     {% endif %}
                 </footer>
+                {% endif %}
             </article>
         {% endif %}
         {% endfor %}
@@ -75,12 +81,16 @@ header-img: /assets/img/index-header.jpg
             <article class="article-item">
                 {% if post.cover %}
                 <div class="post-cover">
+                    {% if post.notice!=true %}
                     <a class="post-link" href="{{ post.url }}" title="{{ post.title }}"></a>
+                    {% endif %}
                     <img src="{{ post.cover }}" alt="">
                 </div>
                 {% endif %}
                 <section class="post-preview">
+                    {% if post.notice!=true %}
                     <a class="post-link" href="{{ post.url }}" title="{{ post.title }}"></a>
+                    {% endif %}
                     <h2 class="post-title">{{ post.title }}</h2>
                     {% if post.subtitle %}
                     <h3 class="post-subtitle">{{ post.subtitle }}</h3>
@@ -89,6 +99,7 @@ header-img: /assets/img/index-header.jpg
                     <p class="post-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 126}}</p>
                     {% endif %}
                 </section>
+                {% if post.notice!=true %}
                 <footer class="post-meta">
                     <div class="post-tags">
                         <i class="iconfont icon-category"></i>
@@ -119,6 +130,7 @@ header-img: /assets/img/index-header.jpg
                     <time class="post-date" id="upd-date" datetime="{{ post.latest | latest:"%y-%m-%d" }}"><i class="iconfont icon-update2"></i> {{ post.latest | date_to_string }}</time>
                     {% endif %}
                 </footer>
+                {% endif %}
             </article>
         {% endif %}
         {% endfor %}
