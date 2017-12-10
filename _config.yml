@@ -8,8 +8,9 @@ baseurl: ''
 # Navigation links
 nav:
   home: '/'
-  categories: '/categories.html'
-  tags: '/tags.html'
+  categories: '/categories'
+  tags: '/tags'
+  activities: '/act'
 
 # Author 配置博主信息
 author: 'Deluxurous'
