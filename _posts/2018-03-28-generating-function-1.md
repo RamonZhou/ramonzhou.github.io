@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '多项式与生成函数'
-date: 2018-013-28
+date: 2018-03-28
 author: Deluxurous
 cover: '/assets/img/mathematics.png'
 categories: OI
