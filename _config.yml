@@ -64,7 +64,7 @@ kramdown:
 RSS: false
 
 # Plugins
-plugins: [jekyll-paginate]
+plugins: [jekyll-paginate, jekyll-admin]
 
 # Friends Link
 links:
