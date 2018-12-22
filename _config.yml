@@ -23,7 +23,7 @@ favicon: '/assets/icons/favicon.png'
 search: true
 
 # Night mode
-nightMode: true
+nightMode: false
 
 # Comments
 disqus: true
